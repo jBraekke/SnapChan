@@ -1,0 +1,224 @@
+.page.lists-show {
+  .content-scrollable {
+    background: @color-empty;
+    top: 5em !important;
+  }
+}
+
+.snap-exit{
+    font-size: 2em;
+    color:white;
+}
+
+.snap-button {
+    border: .1em solid rgba(232, 77, 14, 0.31);
+    font-size: 1em;
+    line-height: 1.1em;
+    color: #ffffff;
+    background-color: rgba(232, 77, 14, 0.62);
+    border-radius: 50%;
+    border-color: rgba(255, 255, 255, 0.4);
+    width: 5em;
+    height: 5em;
+
+	:hover {
+		color:#ffffff;
+	    background-color: #e84d0e;	
+	}
+	:visited {
+		color:#ffffff;
+	    background-color: #e84d0e;
+		text-decoration: none;
+	}
+}
+
+.snap-menu, .my-profile{
+	font-size: 1.9em;
+    margin: 1em;
+    color: #ffffff;
+}
+
+.current-snap-txt{
+	position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white!important;
+    position: absolute; 
+    bottom: 20%;
+    left: 0; 
+}
+
+#currentSnap{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.snap-send{
+    -webkit-transform: rotate(46deg);
+    -moz-transform: rotate(46deg);
+    transform: rotate(46deg);
+    color:white;
+    font-size: 2em;
+}
+
+.share-with{
+    background-color: #4EA885;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    padding: 8px 20px 14px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.chan{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
+}
+
+.chans{
+    background-color: white;
+    height: inherit;
+
+    ul{    
+        overflow-y: scroll;
+        height: inherit;
+        li{
+            min-height: 2.1em;
+            line-height: 2em;
+            padding:20px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.34);
+        }
+
+        li.selected{
+            background-color: rgba(128, 128, 128, 0.34);
+
+            i{
+                color: rgb(69, 163, 126);
+            }
+        }
+    }
+}
+
+.select-channels{
+    font-size: 2em;
+    color: grey;
+    .selected{
+        color:#4EA885;
+    }
+}
+
+.bottom-menu-snap{
+    position: absolute;
+    min-height: 0;
+    bottom: 0;
+    background-color: transparent!important;
+    width: 100%;
+}
+
+.bottom-menu{
+    background-color: #4EA885;
+    padding: 18px 26px 18px 18px;
+    color:white;
+    text-align: center;
+    min-height: 116px;
+
+    .fa-location-arrow{
+        transform: rotate(46deg);
+    }
+    .bottom-nav{
+        font-size: 3em;
+        margin-top: 15px;
+    }
+}
+
+.main{
+    background-color: white;
+}
+
+.chans-view{
+    ul{
+        li.channel{
+            position: relative;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }    
+}
+
+ /* Animations */
+@keyframes wiggle  {
+    0% {
+        -webkit-transform:rotate(4deg);
+        -moz-transform:rotate(4deg);
+        -ms-transform:rotate(4deg);
+        -o-transform:rotate(4deg);
+         transform:rotate(4deg);
+    }
+    50% {
+        -webkit-transform:rotate(-4deg);
+        -moz-transform:rotate(-4deg);
+        -ms-transform:rotate(-4deg);
+        -o-transform:rotate(-4deg);
+         transform:rotate(-4deg);
+    }
+    100% {
+        -webkit-transform:rotate(4deg);
+        -moz-transform:rotate(4deg);
+        -ms-transform:rotate(4deg);
+        -o-transform:rotate(4deg);
+         transform:rotate(4deg);
+    }
+}
+
+@-webkit-keyframes wiggle  {
+    0% {
+        -webkit-transform:rotate(4deg);
+        -moz-transform:rotate(4deg);
+        -ms-transform:rotate(4deg);
+        -o-transform:rotate(4deg);
+         transform:rotate(4deg);
+    }
+    50% {
+        -webkit-transform:rotate(-4deg);
+        -moz-transform:rotate(-4deg);
+        -ms-transform:rotate(-4deg);
+        -o-transform:rotate(-4deg);
+         transform:rotate(-4deg);
+    }
+    100% {
+        -webkit-transform:rotate(4deg);
+        -moz-transform:rotate(4deg);
+        -ms-transform:rotate(4deg);
+        -o-transform:rotate(4deg);
+         transform:rotate(4deg);
+    }
+}
+
+.wiggle {
+    -webkit-animation: wiggle 0.5s infinite;
+    -moz-animation: wiggle 0.5s infinite;
+    -ms-animation: wiggle 0.5s infinite;
+    -o-animation: wiggle 0.5s infinite;
+    animation: wiggle 0.5s infinite;
+}
+
+ /* end Animations */
+
+.profile-img{
+    width:60px!important;
+}
+
+.snap-desc{
+    line-height: 4em;
+    text-transform: uppercase;
+}

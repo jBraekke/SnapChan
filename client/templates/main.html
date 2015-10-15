@@ -1,0 +1,51 @@
+<template name="main">
+  <p class="share-with {{#if equals snapped 1}} hidden {{/if}}">snapchan</p>
+  <div class="main">
+    {{#if equals snapped 0}}
+      {{#if equals snapRendering true}}
+        {{> inappLoading}}
+      {{else}}
+        <div class="content-scrollable">
+          <div class="wrapper-message">
+            <img class="wiggle" src="/img/snapChanSmile.png" />
+            <div class="title-message"> push the button</div>
+          </div>
+        </div>
+      {{/if}}
+    {{/if}}
+
+    <!-- SNAP describe -->
+    {{#if equals snapped 1}}
+      <img id="currentSnap" src="{{snapImg}}">
+      <input type="text" class="current-snap-txt">
+    {{/if}}
+    <!-- SHARE Snap -->
+    {{#if equals snapped 2}}
+    <div class="chans">
+      <ul>
+        {{#each chans}}
+          <li class="channel" value="{{_id}}">
+            <span value="{{_id}}">{{title}}</span> <i class="fa fa-check-circle select-channels pull-right" value="{{_id}}"></i>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+  </div>
+  <div class="bottom-menu {{#if equals snapped 1}} bottom-menu-snap {{/if}}">
+    {{#if equals snapped 0}}
+    <input type="file" capture="camera" accept="image/*" id="takePictureField" name="photo" class="hidden">
+    <i class="fa fa-sun-o pull-left my-profile"></i>
+    <button class="btn snap-button" href="" ></button>
+    <i class="fa fa-align-justify pull-right snap-menu"></i>
+    {{/if}}
+    {{#if equals snapped 1}}
+    <i class="fa fa-times snap-exit pull-left bottom-nav"></i>
+    <i class="fa fa-location-arrow snap-send pull-right bottom-nav"></i>
+    {{/if}}
+    {{#if equals snapped 2}}
+      <i class="fa fa-times snap-exit pull-left bottom-nav"></i>
+      <i class="fa fa-location-arrow pull-right bottom-nav snap-share-js"></i>
+    {{/if}}
+  </div>
+</template>

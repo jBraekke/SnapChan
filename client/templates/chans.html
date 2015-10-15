@@ -1,0 +1,19 @@
+<template name="chans">
+  <p class="share-with back-js"><i class="fa fa-angle-left pull-left"></i>snapchan</p>
+  <div class="main">
+    <div class="chans">
+      <ul>
+        {{#each chans}}
+          <a href="{{pathFor 'channel' _id=_id}}">
+            <li class="channel" value="{{_id}}">           
+              <span value="{{_id}}">{{title}}</span> <i class="fa fa-angle-right select-channels pull-right" value="{{_id}}"></i>
+            </li>
+          </a>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-menu">
+    <i class="fa fa-plus fa-3x"></i>
+  </div>
+</template>

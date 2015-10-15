@@ -1,0 +1,21 @@
+<template name="channel">
+  <p class="share-with chan back-js"><i class="fa fa-angle-left pull-left"></i> {{channel}}</p>
+  <div class="main">
+    <div class="chans-view">
+      <ul>
+        {{#each snaps}}
+          <li class="channel">
+            <div>
+              <img src="{{getSnapOwnerImg snapId}}" class="profile-img img-circle pull-left" />
+              <span class="pull-right snap-desc">{{getSnapOwnerName snapId}} 
+                <span class="text-muted">| {{postedAgo createdAt}}</span>
+              </span>
+            </div>
+            <img src="{{getSnap snapId}}" />
+            <p class="current-snap-txt">{{getSnapMessage snapId}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</template>

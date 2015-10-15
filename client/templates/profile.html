@@ -1,0 +1,29 @@
+<template name="profile">
+	{{>header}}
+	<div class="main">
+	<div class="chans">
+	  <div class="page auth">
+        <div class="content-scrollable">
+          <div class="wrapper-auth">
+            <h1 class="title-auth">Profile</h1>
+            <p class="subtitle-auth" >Change your image</p>
+            <img src="{{photo}}" class="img-circle" width="150" />
+            <form>
+              <div class="input-symbol">
+                <input type="text" class="username" name="username" placeholder="Enter nickname" value="{{profile}}" />
+                <span class="icon-user-addz" title="Your Email"><i class="fa fa-user"></i></span>
+              </div>
+
+              <input type="file" capture="camera" accept="image/*" id="takePictureField" name="photo" class="hidden">
+
+              <a class="btn-primary take-picture"><i class="fa fa-camera"></i> Add your image</a>
+            </form>
+          </div>
+        </div>
+      </div>
+	 </div>
+	</div>
+	<div class="bottom-menu">
+	<i class="fa fa-angle-left fa-4x back-js"></i>
+	</div>
+</template>
