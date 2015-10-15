@@ -1,10 +1,10 @@
 App.info({
-  name: 'Todos',
-  description: 'A simple todo list app built in Meteor.',
-  author: 'Percolate Studio Team',
-  email: 'us@percolatestudio.com',
-  website: 'http://percolatestudio.com',
-  version: '0.0.1'
+  name: 'SnapChan',
+  description: 'Do awesome stuff!',
+  author: 'Jørgen Brække',
+  email: 'jorgenhb@live.com',
+  website: 'http://soprasteria.com',
+  version: '1.0.0'
 });
 
 App.icons({
